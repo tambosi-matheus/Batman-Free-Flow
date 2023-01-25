@@ -15650,7 +15650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 5126414212552759601}
   rb: {fileID: 5126414212552759600}
-  target: {fileID: 0}
+  target: {fileID: 3640584812805435010, guid: 1cbfe9baf1d2b66448e385d1d4ba960f, type: 3}
   counterParticle: {fileID: 9052965540932858022}
   hitParticle: {fileID: 2850042255484269401}
   audio: {fileID: -3865252476478315518}

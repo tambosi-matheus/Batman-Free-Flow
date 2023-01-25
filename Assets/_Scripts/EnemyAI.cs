@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
     {
         foreach(GameObject e in GameObject.FindGameObjectsWithTag("Enemy"))        
             enemies.Add(e.GetComponent<Enemy>());
-        yield return new WaitUntil(() => player != null);
+        yield return new WaitUntil(() => player);
         StartCoroutine(AIUpdate());
     }
 

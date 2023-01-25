@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] Player target;
     [SerializeField] ParticleSystem counterParticle, hitParticle;
-    [SerializeField] new AudioSource audio;
+    [SerializeField] AudioSource audio;
     [SerializeField] GameObject character;
 
 
@@ -29,12 +29,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] TextMeshPro state;
 
 
-    private void Start()
+    void Start()
     {
-        GoToState(States.Idle);
         counterParticle.Clear();
-        counterParticle.Stop();       
-    }
+        counterParticle.Stop();
+        //yield return new WaitUntil(() => target != null);
+        GoToState(States.Idle);
+    }    
 
     private void Update()
     {
@@ -58,7 +59,7 @@ public class Enemy : MonoBehaviour
 
     public void GoToState(States nextState)
     {
-        state.text = nextState.ToString();
+        //state.text = nextState.ToString();
         // On State Exit
         switch (currentState)
         {
